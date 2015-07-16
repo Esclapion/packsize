@@ -34,7 +34,7 @@ PacketSize::PacketSize(QWidget *parent) :
 
     QProcess command;
     command.setReadChannel(QProcess::StandardOutput);
-    command.start("package-query -Qf%3;%n");
+    command.start("package-query -Qf%2;%n");
     command.waitForFinished();
     int row = 0;
     while(command.canReadLine())
