@@ -60,8 +60,9 @@ PacketSize::PacketSize(QWidget *parent) :
     ui->table->sortItems(1, Qt::DescendingOrder);
     order[0] = Qt::AscendingOrder;
     order[1] = Qt::AscendingOrder;
-    int moveX = (QApplication::desktop()->width() - ui->table->width()) / 2;
-    int moveY = (QApplication::desktop()->height() - ui->table->height() - 25) / 2;
+    int moveX = (QApplication::desktop()->width() - 500) / 2;
+//    int moveY = (QApplication::desktop()->height() - ui->table->height() - 25) / 2;
+    int moveY = 0;
     this->move(moveX, moveY);
 }
 
