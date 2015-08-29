@@ -2,7 +2,7 @@
 #define PACKETSIZE_H
 
 #include <QWidget>
-#include <QDebug>
+//#include <QDebug>
 #include <QProcess>
 
 namespace Ui {

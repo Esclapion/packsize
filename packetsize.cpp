@@ -61,7 +61,7 @@ PacketSize::PacketSize(QWidget *parent) :
     order[0] = Qt::AscendingOrder;
     order[1] = Qt::AscendingOrder;
     int moveX = (QApplication::desktop()->width() - 500) / 2;
-//    int moveY = (QApplication::desktop()->height() - ui->table->height() - 25) / 2;
+    //    int moveY = (QApplication::desktop()->height() - ui->table->height() - 25) / 2;
     int moveY = 0;
     this->move(moveX, moveY);
 }
@@ -169,8 +169,7 @@ void PacketSize::keyPressEvent(QKeyEvent *event)
     case Qt::Key_End:
         ui->table->verticalScrollBar()->QScrollBar::setValue(ui->table->rowCount() - 1);
         break;
-     default:
-        qDebug() << event->key();
+    default:
         QWidget::keyPressEvent(event);
     }
 
@@ -178,8 +177,6 @@ void PacketSize::keyPressEvent(QKeyEvent *event)
 
 void PacketSize::on_search_textChanged(const QString &arg1)
 {
-    qDebug() << arg1;
-
     for(int i = 0; i < ui->table->rowCount(); i++)
         if (ui->table->item(i,0)->text().contains(ui->search->text(), Qt::CaseInsensitive))
         {
